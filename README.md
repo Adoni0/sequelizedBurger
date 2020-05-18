@@ -1,0 +1,2 @@
+# sequelizedBurger
+Sequelize Burger
