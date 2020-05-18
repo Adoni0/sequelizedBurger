@@ -5,6 +5,7 @@
 // *** Dependencies
 // =============================================================
 var express = require("express");
+var nodemon = require('nodemon');
 
 // Sets up the Express App
 // =============================================================
