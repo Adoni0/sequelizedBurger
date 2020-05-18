@@ -1,0 +1,57 @@
+<!-- As a heading -->
+<nav class="navbar navbar-light bg-light">
+  <span class="navbar-brand mb-0 h1">Burger Devourer</span>
+  
+</nav>
+  
+<div class='row'>
+  <div class='col-sm-3' id='undevoured'>
+    
+    <h2>Burgers!</h2>
+
+<form class="create-form">
+  <div class='form-group'>
+    {{#each burger}}
+    {{#unless this.devoured}}
+      <input type="radio" data-burger={{this.burger_name}} name="devoured" value="1" checked>{{this.burger_name}}<br>
+      {{!-- {{> burgers/burger-block devoured=false}} --}}
+    {{/unless}}
+    {{/each}} 
+  </div>
+  <br>
+  <button class='eat-burger' data-id='{{id}}' data-newburger='{{devoured}}' type='submit'>Eat this burger!</button>
+</form>
+  </div>
+
+  <div class='col-sm-3'>
+    <img id='image' src='https://images.pexels.com/photos/1639557/pexels-photo-1639557.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500'>
+  </div>
+
+<div class='col-sm-3'>
+  <h2>Devoured</h2>
+
+<ul>
+  {{#each burger}}
+    {{#if this.devoured}}
+      <li>{{this.burger_name}}</li>
+      {{!-- {{> burgers/burger-block devoured=true}} --}}
+    {{/if}}
+  {{/each}}
+</ul>
+</div>
+
+
+</div>
+
+<div class='burger-add-div'>
+  <h2>Add a Burger!</h2>
+<form class="create-form" method="POST" action='/api/burgers'>
+
+  <div class="form-group">
+    <label for="burger">Burger Name:</label>
+    <input type="text" id="bu" name="burger_name">
+  </div>
+
+  <button class='add-burger' type="submit">Add burger</button>
+</form>
+</div>
