@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/Adoni0/sequelizedBurger#readme",
   "dependencies": {
+    "@handlebars/allow-prototype-access": "^1.0.3",
     "express": "^4.17.1",
     "express-handlebars": "^4.0.4",
     "mysql2": "^2.1.0",

@@ -2,7 +2,7 @@ $(function() {
   $(".devour-form").on("submit", function(event) {
     event.preventDefault();
     var id = $(this).children('.burgers-uneaten').val();
-
+    alert(id);
     // Send the PUT request.
     $.ajax("/api/burgers/" + id, {
       method: "PUT"

@@ -3,8 +3,11 @@ var db = require("../models");
 module.exports = function (app) {
     app.get("/", function (req, res) {
         db.Burgers.findAll({}).then(function (data) {
-            // res.json(data);
-            res.render('index', {burger: data});
+            
+            // console.log(data);
+            // data = JSON.stringify(data)
+            // console.log(data);
+            res.render('index', { burger: data });
         });
     });
 
@@ -21,6 +24,7 @@ module.exports = function (app) {
     });
 
     app.put("/api/burgers/:id", function (req, res) {
+        console.log(req.params.id);
         db.Burgers.update(
             {devoured: true},{
             where: {

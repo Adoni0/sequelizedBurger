@@ -2,6 +2,7 @@
 var express = require("express");
 var nodemon = require('nodemon');
 var exphbs = require("express-handlebars");
+var {allowInsecurePrototypeAccess} = require('@handlebars/allow-prototype-access')
 
 // Sets up the Express App
 // =============================================================
@@ -21,15 +22,12 @@ app.use(express.json());
 // Static directory
 app.use(express.static("public"));
 
-// Routes
-// =============================================================
-// require("./routes/html-routes.js")(app);
-// require("./routes/author-api-routes.js")(app);
-// require("./routes/post-api-routes.js")(app);
+require("./routes/burger-api-routes.js")(app);
+
 
 // Syncing our sequelize models and then starting our Express app
 // =============================================================
-db.sequelize.sync({ force: true }).then(function() {
+db.sequelize.sync().then(function() {
   app.listen(PORT, function() {
     console.log("App listening on PORT " + PORT);
   });

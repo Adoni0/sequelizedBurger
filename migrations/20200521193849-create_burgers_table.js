@@ -2,7 +2,7 @@
 
 module.exports = {
   up: (queryInterface, Sequelize) => {
-    return queryInterface.createTable('burgers', {
+    return queryInterface.createTable('Burgers', {
       id: {
         type: Sequelize.INTEGER,
         allowNull: false,
@@ -17,7 +17,6 @@ module.exports = {
     devoured: {
         type: Sequelize.BOOLEAN,
         allowNull: false,
-        len: [1]
     },
     createdAt: Sequelize.DATE,
     updatedAt: Sequelize.DATE

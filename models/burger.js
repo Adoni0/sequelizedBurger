@@ -2,7 +2,7 @@ const Sequelize = require('sequelize');
 
 
 module.exports = function(sequelize, DataTypes) {
-    var Burgers = sequelize.define('burgers', {
+    var Burgers = sequelize.define('Burgers', {
         id: {
             type: DataTypes.INTEGER,
             allowNull: false,
@@ -17,7 +17,6 @@ module.exports = function(sequelize, DataTypes) {
         devoured: {
             type: DataTypes.BOOLEAN,
             allowNull: false,
-            len: [1]
         }
     })
     return Burgers

@@ -4,19 +4,18 @@
   
 </nav>
   
-<div class='row'>
-  <div class='col-sm-3' id='undevoured'>
+<div class="row">
+  <div class="col-sm-3" id="undevoured">
     
     <h2>Burgers!</h2>
 
 
-  <div class='form-group'>
+  <div class="form-group">
     {{#each burger}}
     {{#unless this.devoured}}
     <form class="create-form devour-form">
-      <input class='burgers-uneaten' type="radio" data-burger={{this.burger_name}} name="devoured" value={{this.id}} checked>{{this.burger_name}}<br>
-      {{!-- {{> burgers/burger-block devoured=false}} --}}
-      <button id='submitBtn' type='submit'>Eat this burger!</button>
+      <input class="burgers-uneaten" type="radio" data-burger="{{ this.burger_name }}" name="devoured" value="{{this.id}}" checked>{{this.burger_name}}<br>
+      <button id="submitBtn" type="submit">Eat this burger!</button>
       </form>
     {{/unless}}
     {{/each}} 
@@ -28,11 +27,11 @@
 
   </div>
 
-  <div class='col-sm-3'>
-    <img id='image' src='https://images.pexels.com/photos/1639557/pexels-photo-1639557.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500'>
+  <div class="col-sm-3">
+    <img id="image" src="https://images.pexels.com/photos/1639557/pexels-photo-1639557.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500">
   </div>
 
-<div class='col-sm-3'>
+<div class="col-sm-3">
   <h2>Devoured</h2>
 
 <ul>
@@ -48,15 +47,15 @@
 
 </div>
 
-<div class='burger-add-div'>
+<div class="burger-add-div">
   <h2>Add a Burger!</h2>
-<form class="create-form" method="POST" action='/api/burgers'>
+<form class="create-form" method="POST" action="/api/burgers">
 
   <div class="form-group">
     <label for="burger">Burger Name:</label>
     <input type="text" id="bu" name="burger_name">
   </div>
 
-  <button class='add-burger' type="submit">Add burger</button>
+  <button class="add-burger" type="submit">Add burger</button>
 </form>
 </div>
