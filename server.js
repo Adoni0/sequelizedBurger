@@ -2,7 +2,6 @@
 var express = require("express");
 var nodemon = require('nodemon');
 var exphbs = require("express-handlebars");
-var {allowInsecurePrototypeAccess} = require('@handlebars/allow-prototype-access')
 
 // Sets up the Express App
 // =============================================================

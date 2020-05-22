@@ -3,11 +3,11 @@ var db = require("../models");
 module.exports = function (app) {
     app.get("/", function (req, res) {
         db.Burgers.findAll({}).then(function (data) {
-            
+          var result = JSON.stringify(data);
+          res.render("index", { burger: JSON.parse(result) });
             // console.log(data);
             // data = JSON.stringify(data)
             // console.log(data);
-            res.render('index', { burger: data });
         });
     });
 
