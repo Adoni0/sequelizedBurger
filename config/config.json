@@ -1,26 +1,28 @@
 {
   "development": {
-    "username": "root",
-    "password": null,
-    "database": "seq_burgers",
-    "host": "127.0.0.1",
+    "username": "jh905ycx5zaamna3",
+    "password": "l0qt9tnc3glst1bj",
+    "database": "q5g1pco44qz9aoi6",
+    "host": "tj5iv8piornf713y.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
     "port": 3306,
     "dialect": "mysql",
     "operatorsAliases": false
   },
   "test": {
-    "username": "root",
-    "password": null,
-    "database": "database_test",
-    "host": "127.0.0.1",
+    "username": "jh905ycx5zaamna3",
+    "password": "l0qt9tnc3glst1bj",
+    "database": "q5g1pco44qz9aoi6",
+    "host": "tj5iv8piornf713y.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+    "port": 3306,
     "dialect": "mysql",
     "operatorsAliases": false
   },
   "production": {
-    "username": "root",
-    "password": null,
-    "database": "database_production",
-    "host": "127.0.0.1",
+    "username": "jh905ycx5zaamna3",
+    "password": "l0qt9tnc3glst1bj",
+    "database": "q5g1pco44qz9aoi6",
+    "host": "tj5iv8piornf713y.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+    "port": 3306,
     "dialect": "mysql",
     "operatorsAliases": false
   }
